@@ -46,9 +46,15 @@ public class PerintahBayar {
     
     private Long nomorDrpp;
     
-    private Long namaRekanan;
+    private String namaRekanan;
     
     private Long nomorKuitansi;
+    
+    private String namaPic;
+    
+    private String status;
+    
+    private String keterangan;
 
     public Long getId() {
         return id;
@@ -156,11 +162,11 @@ public class PerintahBayar {
         this.nomorDrpp = nomorDrpp;
     }
 
-    public Long getNamaRekanan() {
+    public String getNamaRekanan() {
         return namaRekanan;
     }
 
-    public void setNamaRekanan(Long namaRekanan) {
+    public void setNamaRekanan(String namaRekanan) {
         this.namaRekanan = namaRekanan;
     }
     
@@ -172,7 +178,33 @@ public class PerintahBayar {
     public void setNomorKuitansi(Long nomorKuitansi) {
         this.nomorKuitansi = nomorKuitansi;
     }
+
+    public String getNamaPic() {
+        return namaPic;
+    }
+
+    public void setNamaPic(String namaPic) {
+        this.namaPic = namaPic;
+    }
+
+    
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getKeterangan() {
+        return keterangan;
+    }
+
+    public void setKeterangan(String keterangan) {
+        this.keterangan = keterangan;
+    }
    
+    
     
     
 }

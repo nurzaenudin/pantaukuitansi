@@ -39,7 +39,6 @@ public class PerintahBayarController {
     @GetMapping("perintahbayar/all")
     @ResponseBody
     public Page<PerintahBayar> getAllPerintahBayars(Pageable pageable){
-        System.out.println("ini ibu Budi");
         return perintahbayardao.findAll(pageable);
     }
     
