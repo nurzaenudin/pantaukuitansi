@@ -24,6 +24,8 @@ public class PerintahBayar {
     
     private Long nomorPerintahBayar;
     
+    private Long nilaiKotor;
+    
     private Long jumlah;
     
     private Long hargaSatuan;
@@ -37,6 +39,16 @@ public class PerintahBayar {
     private Long pph23;
     
     private Long pphFinal;
+    
+    private Long totalPajak;
+    
+    private Long nilaiBersih;
+    
+    private Long nomorDrpp;
+    
+    private Long namaRekanan;
+    
+    private Long nomorKuitansi;
 
     public Long getId() {
         return id;
@@ -53,6 +65,15 @@ public class PerintahBayar {
     public void setNomorPerintahBayar(Long nomorPerintahBayar) {
         this.nomorPerintahBayar = nomorPerintahBayar;
     }
+
+    public Long getNilaiKotor() {
+        return nilaiKotor;
+    }
+
+    public void setNilaiKotor(Long nilaiKotor) {
+        this.nilaiKotor = nilaiKotor;
+    }
+
 
     public Long getJumlah() {
         return jumlah;
@@ -109,6 +130,49 @@ public class PerintahBayar {
     public void setPphFinal(Long pphFinal) {
         this.pphFinal = pphFinal;
     }
+
+    public Long getTotalPajak() {
+        return totalPajak;
+    }
+
+    public void setTotalPajak(Long totalPajak) {
+        this.totalPajak = totalPajak;
+    }
+
+    public Long getNilaiBersih() {
+        return nilaiBersih;
+    }
+
+    public void setNilaiBersih(Long nilaiBersih) {
+        this.nilaiBersih = nilaiBersih;
+    }
+    
+    
+    public Long getNomorDrpp() {
+        return nomorDrpp;
+    }
+
+    public void setNomorDrpp(Long nomorDrpp) {
+        this.nomorDrpp = nomorDrpp;
+    }
+
+    public Long getNamaRekanan() {
+        return namaRekanan;
+    }
+
+    public void setNamaRekanan(Long namaRekanan) {
+        this.namaRekanan = namaRekanan;
+    }
+    
+    
+    public Long getNomorKuitansi() {
+        return nomorKuitansi;
+    }
+
+    public void setNomorKuitansi(Long nomorKuitansi) {
+        this.nomorKuitansi = nomorKuitansi;
+    }
    
+    
     
 }
