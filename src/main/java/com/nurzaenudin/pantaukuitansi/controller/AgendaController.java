@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -37,18 +38,21 @@ public class AgendaController {
     
     @GetMapping("agenda/all")
     @ResponseBody
+    @CrossOrigin(origins = "*")
     public Page<Agenda> getAllAgendas (Pageable pageable){
         return agendadao.findAll(pageable);
     }
     
     @PostMapping(path="/agenda/tambah")
     @ResponseBody
+    @CrossOrigin(origins = "*")
     public void tambahAgenda (@RequestBody Agenda agenda){
         agendadao.save(agenda);
     }
     
     @DeleteMapping("/agenda/{id}")
     @ResponseBody
+    @CrossOrigin(origins = "*")
     public String hapusAgenda(@PathVariable Long id){
         agendadao.deleteById(id);
         return "hapus berhasil";
@@ -56,6 +60,7 @@ public class AgendaController {
     
     @GetMapping ("/agenda/{id}")
     @ResponseBody
+    @CrossOrigin(origins = "*")
     public Optional getAgenda (@PathVariable Long id){
         return agendadao.findById(id);
     }
@@ -63,6 +68,7 @@ public class AgendaController {
     
     @PutMapping("agenda/{id}")
     @ResponseBody
+    @CrossOrigin(origins = "*")
     public void updateAgenda (@RequestBody Agenda agenda, @PathVariable Long id){
         Optional <Agenda> ag=getAgenda(id);
         if(!ag.isPresent())

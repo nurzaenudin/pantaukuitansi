@@ -46,12 +46,14 @@ public class PerintahBayarController {
     
     @PostMapping(path="/perintahbayar/tambah")
     @ResponseBody
+    @CrossOrigin(origins = "*")
     public void tambahPerintahBayar(@RequestBody PerintahBayar perintahbayar){
         perintahbayardao.save(perintahbayar);
     }
     
     @DeleteMapping("/perintahbayar/{id}")
     @ResponseBody
+    @CrossOrigin(origins = "*")
     public String hapusPerintahBayar (@PathVariable Long id){
         perintahbayardao.deleteById(id);
         return "Hapus Berhasil";
@@ -59,6 +61,7 @@ public class PerintahBayarController {
     
     @GetMapping("/perintahbayar/{id}")
     @ResponseBody
+    @CrossOrigin(origins = "*")
     public Optional getPerintahBayar(@PathVariable Long id){
         System.out.println("ini adalah id " +id);
         return perintahbayardao.findById(id);
@@ -67,6 +70,7 @@ public class PerintahBayarController {
     
     @PutMapping("/perintahbayar/{id}")
     @ResponseBody
+    @CrossOrigin(origins = "*")
     public void updatePerintahBayar (@RequestBody PerintahBayar perintahbayar, @PathVariable Long id){
         Optional <PerintahBayar> pb= getPerintahBayar(id);
         if (!pb.isPresent())
